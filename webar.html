@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KILL ME!</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet"> <!-- Adding the Space Grotesk font -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    html, body {
+      height: 100%;
+      width: 100%;
+    }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 20;
+     
+      font-family: 'Space Grotesk', sans-serif; /* Applying the custom font */    
+      overflow: hidden; /* Prevent content overflow */
+     
+    }
+    .imgbox {
+      position: relative;
+      height: 100%;
+      width: 100%;
+    }
+    .centered-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      justify-content: space-between;
+      width: 100%; /* Adjust as needed */
+      font-size: 2em; /* Setting the text size */
+      font-weight: 500; /* Setting the font weight */
+      z-index: 1;  /* Ensure text is above the model viewer */
+    }
+    .centered-text span {
+      white-space: nowrap;
+    }
+    model-viewer {
+      height: 100%;
+      width: 100%;
+      z-index: 2;
+    }
+  </style>
+</head>
+<body>
+  <div class="imgbox">
+    <model-viewer 
+      /* poster="https://error420notfound.github.io/Chair-AR/Frame%201.png" */
+      src="https://error420notfound.github.io/anoka/Murti%201.1%20.glb" 
+      ar-modes="scene-viewer webxr quick-look" 
+      ios-src="https://error420notfound.github.io/anoka/Murti%201.1%20.usdz?raw=true" 
+      alt="A 3D model"
+      interaction-prompt="none"  
+      camera-controls 
+      auto-rotate 
+      disable-pan 
+      disable-zoom
+      disable-tap 
+      shadow-intensity="1"
+      camera-orbit="60deg 95deg 4m"
+      ar
+      reveal="auto" 
+      loading="lazy"
+      id="orbit-demo"
+      generate-schema>
+    </model-viewer>
+    <div class="centered-text">
+      <span style="text-align: left; padding-left: 30px;
+      padding-right: 30px;">Product</span>
+      <span style="text-align: right; padding-left: 30px;
+      padding-right: 30px;">Design</span>
+    </div>
+  </div>
+</body>
+</html>
