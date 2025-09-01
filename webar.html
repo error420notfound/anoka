@@ -88,10 +88,11 @@
     width: 100%;
     pointer-events: none;
     overflow: visible;
+    isolation: isolate;
   }
 
   /* overlay blending on each layer */
-  .gradient-blur-root .layer { position: absolute; inset: 0 }
+  .gradient-blur-root .layer { position: absolute; inset: 0; mix-blend-mode: overlay; }
 
   /* steps (custom properties) */
   .gradient-blur-root .layer[data-step="1"]  { --top: 0%;  --bottom: 20%;  --blur: 0px; }
@@ -168,7 +169,7 @@
 
       
     </model-viewer>
-    <div class="centered-text">
+    <div class="centered-text" z-index:0>
       <span style="text-align: left; padding-left: 30px;
       padding-right: 30px;">PRODUCT</span>
       <span style="text-align: right; padding-left: 30px;
