@@ -42,7 +42,7 @@
       width: 100%; /* Adjust as needed */
       font-size: 2em; /* Setting the text size */
       font-weight: 500; /* Setting the font weight */
-      /* z-index: 1;  /* Ensure text is above the model viewer */
+      z-index: -1;  /* Ensure text is above the model viewer */
     }
     .centered-text span {
       white-space: nowrap;
@@ -97,15 +97,15 @@
 
   /* steps (custom properties) */
   .gradient-blur-root .layer[data-step="1"]  { --top: 0%;  --bottom: 20%;  --blur: 0px; }
-  .gradient-blur-root .layer[data-step="1"]  { --top: 10%; --bottom: 30%;  --blur: 2px; }
-  .gradient-blur-root .layer[data-step="1"]  { --top: 20%; --bottom: 40%;  --blur: 4px; }
-  .gradient-blur-root .layer[data-step="1"]  { --top: 30%; --bottom: 50%;  --blur: 6px; }
-  .gradient-blur-root .layer[data-step="1"]  { --top: 40%; --bottom: 60%;  --blur: 8px; }
-  .gradient-blur-root .layer[data-step="1"]  { --top: 50%; --bottom: 70%;  --blur: 10px; }
-  .gradient-blur-root .layer[data-step="1"]  { --top: 60%; --bottom: 80%;  --blur: 20px; }
-  .gradient-blur-root .layer[data-step="1"]  { --top: 70%; --bottom: 90%;  --blur: 30px; }
-  .gradient-blur-root .layer[data-step="1"]  { --top: 80%; --bottom: 100%; --blur: 40px; }
-  .gradient-blur-root .layer[data-step="1"] { --top: 90%; --bottom: 100%; --blur: 50px; }
+  .gradient-blur-root .layer[data-step="2"]  { --top: 10%; --bottom: 30%;  --blur: 2px; }
+  .gradient-blur-root .layer[data-step="3"]  { --top: 20%; --bottom: 40%;  --blur: 4px; }
+  .gradient-blur-root .layer[data-step="4"]  { --top: 30%; --bottom: 50%;  --blur: 6px; }
+  .gradient-blur-root .layer[data-step="5"]  { --top: 40%; --bottom: 60%;  --blur: 8px; }
+  .gradient-blur-root .layer[data-step="6"]  { --top: 50%; --bottom: 70%;  --blur: 10px; }
+  .gradient-blur-root .layer[data-step="7"]  { --top: 60%; --bottom: 80%;  --blur: 20px; }
+  .gradient-blur-root .layer[data-step="8"]  { --top: 70%; --bottom: 90%;  --blur: 30px; }
+  .gradient-blur-root .layer[data-step="9"]  { --top: 80%; --bottom: 100%; --blur: 40px; }
+  .gradient-blur-root .layer[data-step="10"] { --top: 90%; --bottom: 100%; --blur: 50px; }
 
   /* WebKit-compatible blur and masks */
   .gradient-blur-root .layer {
@@ -154,15 +154,15 @@
 
      <div class="gradient-blur-root" aria-hidden="true">
   <div class="layer" data-step="1"  style="z-index:1"></div>
-  <div class="layer" data-step="2"  style="z-index:2"></div>
-  <div class="layer" data-step="3"  style="z-index:3"></div>
-  <div class="layer" data-step="4"  style="z-index:4"></div>
-  <div class="layer" data-step="5"  style="z-index:5"></div>
-  <div class="layer" data-step="6"  style="z-index:6"></div>
-  <div class="layer" data-step="7"  style="z-index:7"></div>
-  <div class="layer" data-step="8"  style="z-index:8"></div>
-  <div class="layer" data-step="9"  style="z-index:9"></div>
-  <div class="layer" data-step="10" style="z-index:10"></div>
+  <div class="layer" data-step="2"  style="z-index:1"></div>
+  <div class="layer" data-step="3"  style="z-index:1"></div>
+  <div class="layer" data-step="4"  style="z-index:1"></div>
+  <div class="layer" data-step="5"  style="z-index:1"></div>
+  <div class="layer" data-step="6"  style="z-index:1"></div>
+  <div class="layer" data-step="7"  style="z-index:1"></div>
+  <div class="layer" data-step="8"  style="z-index:1"></div>
+  <div class="layer" data-step="9"  style="z-index:1"></div>
+  <div class="layer" data-step="10" style="z-index:1"></div>
       
       <button slot="ar-button" id="ar-button" z-index:12>
     View in your space
@@ -170,7 +170,7 @@
 
       
     </model-viewer>
-    <div class="centered-text" z-index:0>
+    <div class="centered-text"; >
       <span style="text-align: left; padding-left: 30px;
       padding-right: 30px;">PRODUCT</span>
       <span style="text-align: right; padding-left: 30px;
