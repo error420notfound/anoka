@@ -42,7 +42,7 @@
       width: 100%; /* Adjust as needed */
       font-size: 2em; /* Setting the text size */
       font-weight: 500; /* Setting the font weight */
-      z-index: 1;  /* Ensure text is above the model viewer */
+      /* z-index: 1;  /* Ensure text is above the model viewer */
     }
     .centered-text span {
       white-space: nowrap;
@@ -57,7 +57,7 @@
     left: 50%;
     transform: translateX(-50%);
     bottom: 10%;
-    z-index: 3; /* Ensure the button is above other elements */
+    /* z-index: 3; /* Ensure the button is above other elements */
     font-family: 'Rajdhani', sans-serif; /* Apply the custom font */
     font-size: 1em; /* Set the font size */
     background-color: rgba(0, 0, 0, 0.3); /* 30% transparent grey background */
@@ -67,6 +67,7 @@
     padding: 24px 38px 24px 36px; /* Top, Right, Bottom, Left padding */
     color: white; /* Set text color */
     border-radius: 20px; /* Optional: rounded corners */
+    mix-blend-mode: overlay;
   }
     #ar-button:active {
       background-color: #E8EAED;
@@ -92,7 +93,7 @@
   }
 
   /* overlay blending on each layer */
-  .gradient-blur-root .layer { position: absolute; inset: 0; mix-blend-mode: overlay; }
+  .gradient-blur-root .layer { position: absolute; inset: 0; /*mix-blend-mode: overlay;*/ }
 
   /* steps (custom properties) */
   .gradient-blur-root .layer[data-step="1"]  { --top: 0%;  --bottom: 20%;  --blur: 0px; }
