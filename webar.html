@@ -42,7 +42,7 @@
       width: 100%; /* Adjust as needed */
       font-size: 2em; /* Setting the text size */
       font-weight: 500; /* Setting the font weight */
-       z-index: 11;  /* Ensure text is above the model viewer */
+       /* z-index: 11;  /* Ensure text is above the model viewer */
     }
     .centered-text span {
       white-space: nowrap;
@@ -50,14 +50,14 @@
     model-viewer {
       height: 100%;
       width: 100%;
-      z-index: 12;
+      /* z-index: 12; */
     }
      #ar-button {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     bottom: 10%;
-    /* z-index: 3; /* Ensure the button is above other elements */
+     z-index: 3; /* Ensure the button is above other elements */
     font-family: 'Rajdhani', sans-serif; /* Apply the custom font */
     font-size: 1em; /* Set the font size */
     background-color: rgba(0, 0, 0, 0.3); /* 30% transparent grey background */
@@ -68,7 +68,7 @@
     color: white; /* Set text color */
     border-radius: 20px; /* Optional: rounded corners */
     /* mix-blend-mode: overlay; */
-       z-index: 15;
+      /*  z-index: 15; */
   }
     #ar-button:active {
       background-color: #E8EAED;
@@ -134,7 +134,7 @@
       disable-zoom
       disable-tap 
       shadow-intensity="1"
-      camera-orbit="90deg 95deg 2m" 
+      camera-orbit="90deg 95deg 4m" 
       reveal="auto" 
       loading="eager"
       id="orbit-demo"
